@@ -1,0 +1,6 @@
+Caso de Prueba,Po_jsonRequest,Po_nombre,Po_correo,Po_contrasena,Po_administrador,Po_jsonResponse,Po_mensaje,
+Registrar un nuevo usuario con datos válidos-Status 201,req_Post_Usuarios.json,YuTest12,YuTest12@qa.com,testerqa12,true,resp_Post_Usuarios.json,Cadastro realizado com sucesso,
+Registrar un nuevo usuario con datos válidos-Status 201,req_Post_Usuarios.json,YuTest13,YuTest13@qa.com,testerqa13,false,resp_Post_Usuarios.json,Cadastro realizado com sucesso,
+Registrar un nuevo usuario con datos válidos-Status 201,req_Post_Usuarios.json,YuTest14,YuTest14@qa.com,testerqa14,true,resp_Post_Usuarios.json,Cadastro realizado com sucesso,
+Registrar un nuevo usuario con datos válidos-Status 201,req_Post_Usuarios.json,YuTest15,YuTest15@qa.com,testerqa15,false,resp_Post_Usuarios.json,Cadastro realizado com sucesso,
+Registrar un nuevo usuario con datos válidos-Status 201,req_Post_Usuarios.json,YuTest16,YuTest16@qa.com,testerqa16,true,resp_Post_Usuarios.json,Cadastro realizado com sucesso,

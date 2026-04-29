@@ -1,0 +1,4 @@
+Caso de Prueba,P_Id,P_jsonRequest,P_nombre,P_correo,P_contrasena,P_administrador,P_jsonResponse,P_mensaje,code
+Editar usuario-Status 200,0uxuPY0cbmQhpEz1,req_Put_Usuarios.json,Fulano da Silva2,fulano2@qa.com,teste2,true,resp_Put_Usuarios.json,Registro alterado com sucesso,200
+Editar usuario-Status 201,0uxuPY0cbmQhpEz3,req_Put_Usuarios.json,Fulano da Silva3,fulano3@qa.com,teste3,true,resp_Put_Usuarios_201.json,Cadastro realizado com sucesso,201,
+Editar usuario-Status 400,0uxuPY0cbmQhpEz2,req_Put_Usuarios.json,Fulano da Silva1,fulano1@qa.com,teste1,true,resp_Put_Usuarios.json,Este email já está sendo usado,400

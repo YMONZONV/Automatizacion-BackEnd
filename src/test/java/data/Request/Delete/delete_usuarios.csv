@@ -1,0 +1,4 @@
+Caso de Prueba,P_Id,D_jsonResponse,D_mensaje
+Excluir un usuario por su ID-Status 200,neSvVx5kDD7C6imC,resp_Delete_Usuarios.json,Registro excluído com sucesso
+Excluir un usuario por su ID-Status 200,neSvVx5kDD7C6imC,resp_Delete_Usuarios.json,Nenhum registro excluído
+

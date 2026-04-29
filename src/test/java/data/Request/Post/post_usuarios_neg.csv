@@ -1,0 +1,6 @@
+Caso de Prueba,Po_jsonRequest,Po_nombre,Po_correo,Po_contrasena,Po_administrador,Npo_jsonResponse,N_mensaje
+Registrar un nuevo usuario con datos usados-Status 400,req_Post_Usuarios.json,YuTest1,YuTest1@qa.com,testerqa1,true,resp_Uh_Post_Usuarios.json,Este email já está sendo usado
+Registrar un nuevo usuario con datos usados-Status 400,req_Post_Usuarios.json,YuTest2,YuTest2@qa.com,testerqa2,false,resp_Uh_Post_Usuarios.json,Este email já está sendo usado
+Registrar un nuevo usuario con datos usados-Status 400,req_Post_Usuarios.json,YuTest3,YuTest3@qa.com,testerqa3,true,resp_Uh_Post_Usuarios.json,Este email já está sendo usado
+Registrar un nuevo usuario con datos usados-Status 400,req_Post_Usuarios.json,YuTest4,YuTest4@qa.com,testerqa4,false,resp_Uh_Post_Usuarios.json,Este email já está sendo usado
+Registrar un nuevo usuario con datos usados-Status 400,req_Post_Usuarios.json,YuTest5,YuTest5@qa.com,testerqa5,true,resp_Uh_Post_Usuarios.json,Este email já está sendo usado

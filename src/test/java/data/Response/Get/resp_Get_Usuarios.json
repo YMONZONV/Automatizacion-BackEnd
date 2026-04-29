@@ -1,0 +1,12 @@
+{
+  "quantidade": "#number",
+  "usuarios": [
+    {
+      "nome": "#(U_nome)",
+      "email": "#(U_email)",
+      "password": "#(U_password)",
+        "administrador": "#(U_administrador)",
+      "_id": "#(U_id)"
+    }
+  ]
+}

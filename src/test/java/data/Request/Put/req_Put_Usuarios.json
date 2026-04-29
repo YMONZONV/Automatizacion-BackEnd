@@ -1,0 +1,6 @@
+{
+  "nome": "#(P_nombre)",
+  "email": "#(P_correo)",
+  "password": "#(P_contrasena)",
+  "administrador": "#(P_administrador)"
+}

@@ -1,0 +1,7 @@
+{
+  "_id": "#(P_id)",
+  "nome": "#(P_nome)",
+  "email": "#(P_email)",
+  "password": "#(P_password)",
+  "administrador": "#(P_administrador)"
+}

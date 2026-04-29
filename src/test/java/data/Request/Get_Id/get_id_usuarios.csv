@@ -1,0 +1,6 @@
+Caso de Prueba,P_Id,G_jsonResponse,G_nombre,G_correo,G_contrasena,G_administrador,G_Id
+Buscar usuarios por ID-Status 200,06DzEI0N8p58NEB9,resp_Get_Id.json,YuTest12,YuTest12@qa.com,testerqa12,true,06DzEI0N8p58NEB9
+Buscar usuarios por ID-Status 200,Dvt9wNgmixDxLDC3,resp_Get_Id.json,YuTest13,YuTest13@qa.com,testerqa13,false,Dvt9wNgmixDxLDC3
+Buscar usuarios por ID-Status 200,ZsqTgaJnUgawk66i,resp_Get_Id.json,YuTest14,YuTest14@qa.com,testerqa14,true,ZsqTgaJnUgawk66i
+Buscar usuarios por ID-Status 200,FxFCUN7crzNGN4NQ,resp_Get_Id.json,YuTest15,YuTest15@qa.com,testerqa15,false,FxFCUN7crzNGN4NQ
+Buscar usuarios por ID-Status 200,TKvnB87PQOxJSKvU,resp_Get_Id.json,YuTest16,YuTest16@qa.com,testerqa16,true,TKvnB87PQOxJSKvU
