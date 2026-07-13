@@ -1,1 +1,58 @@
 
+name: CI - Karate API Tests
+
+# Eventos que disparan el workflow
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    # Ejecutar tests diariamente a las 9 AM UTC
+    - cron: '0 9 * * *'
+
+jobs:
+  test:
+    name: Run Karate Tests
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        java-version: [17]
+
+    steps:
+      # Paso 1: Checkout del código
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Paso 2: Configurar Java
+      - name: Set up JDK ${{ matrix.java-version }}
+        uses: actions/setup-java@v3
+        with:
+          java-version: ${{ matrix.java-version }}
+          distribution: 'temurin'
+          cache: maven
+
+      # Paso 3: Limpiar y compilar
+      - name: Clean and compile
+        run: mvn clean compile
+
+      # Paso 4: Ejecutar tests
+      - name: Run Karate tests
+        run: mvn test
+
+      # Paso 5: Subir reportes (aunque falle)
+      - name: Upload Karate Reports
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: karate-reports
+          path: target/karate-reports/
+          retention-days: 30
+
+      # Paso 6: Notificar resultado
+      - name: Test Results Summary
+        if: always()
+        run: |
+          echo "✅ Tests completed!"
+          echo "📊 Reports available in artifacts"
