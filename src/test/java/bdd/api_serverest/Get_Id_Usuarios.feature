@@ -1,9 +1,9 @@
 Feature: Buscar Usuario por ID
-  Background:
   Como un administrador del sistema,
   Quiero poder gestionar los usuarios a través de la API,
   Para administrar la base de datos de usuarios.
 
+  Background:
     * url baseUrl
 
   @server1

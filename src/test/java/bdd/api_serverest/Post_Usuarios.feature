@@ -6,7 +6,7 @@ Feature: Registrar Usuarios
   Para administrar la base de datos de usuarios.
 
     * url baseUrl
-
+  @PostUsuariosOK
   Scenario Outline: 1.Registrar un nuevo usuario con datos válidos-Status 201
     Given path '/usuarios'
     * def request_body = read('classpath:data/Request/Post/<Po_jsonRequest>')
@@ -21,6 +21,7 @@ Feature: Registrar Usuarios
     Examples:
       | read ('classpath:data/Request/Post/post_usuarios.csv') |
 
+  @PostUsuariosNeg
   Scenario Outline: 2.Registrar un  usuario con datos usados-Status 400
     Given url "https://serverest.dev/usuarios"
     * def request_body = read('classpath:data/Request/Post/<Po_jsonRequest>')
