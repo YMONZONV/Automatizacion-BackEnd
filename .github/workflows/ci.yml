@@ -1,4 +1,3 @@
-
 name: CI - Karate API Tests
 
 # Eventos que disparan el workflow
@@ -21,13 +20,13 @@ jobs:
         java-version: [17]
 
     steps:
-      # Paso 1: Checkout del código
+      # Paso 1: Checkout del código (Actualizado a v4)
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      # Paso 2: Configurar Java
+      # Paso 2: Configurar Java (Actualizado a v4)
       - name: Set up JDK ${{ matrix.java-version }}
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with:
           java-version: ${{ matrix.java-version }}
           distribution: 'temurin'
@@ -41,10 +40,10 @@ jobs:
       - name: Run Karate tests
         run: mvn test
 
-      # Paso 5: Subir reportes (aunque falle)
+      # Paso 5: Subir reportes (Aunque falle) (Actualizado a v4)
       - name: Upload Karate Reports
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: karate-reports
           path: target/karate-reports/
