@@ -1,0 +1,33 @@
+name: Run Specific Tests by Tag
+
+on:
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Karate tags (ej: @GetUsuarios,@PostUsuarios)'
+        required: true
+        default: '@GetUsuarios'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Run tests with specific tags
+        run: mvn test -Dkarate.options="--tags ${{ github.event.inputs.tags }}"
+
+      - name: Upload Reports
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: karate-reports
+          path: target/karate-reports/
