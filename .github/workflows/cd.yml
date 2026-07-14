@@ -1,0 +1,44 @@
+name: CD - Deploy Karate Reports
+
+on:
+  push:
+    branches: [ main ] # Se ejecuta automáticamente al mandar cambios a main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy-reports:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Run Karate tests
+        run: mvn clean test
+        continue-on-error: true # Evita que el flujo se detenga si un test falla, para poder subir el reporte de todas formas
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'target/karate-reports/' # Sube la carpeta de reportes generada por Karate
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
