@@ -28,7 +28,7 @@ jobs:
           cache: maven
 
       - name: Run Karate tests
-        run: mvn clean test
+        run: mvn clean test -Dmaven.test.failure.ignore=true
         continue-on-error: true # Evita que el flujo se detenga si un test falla, para poder subir el reporte de todas formas
 
       - name: Setup Pages
